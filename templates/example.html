@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<font size="4" face="Courier, Pica, Monospace"></font>
+<h1>Examples</h1>
+<h1>N4 Methylcytosine sites</h1></br>
+
+<div class="alert alert-success">
+<p>>P1|1</p>
+<p>GTTGAAGCTAAATTCACCGGCGTTGATCGTAAAAACCGCGC</p>
+</div>
+
+<div class="alert alert-success">
+<p>>P2|1</p>
+<p>ATGGCACGAGAAAATTGAGACATGGATCTTAAATGAAGCAG</p>
+</div>
+
+<div class="alert alert-success">
+<p>>P3|1</p>
+<p>GCGCGTGCCTTTGCCTGCGGCAAGGATCACTACGCTCATAG</p>
+</div>
+
+<div class="alert alert-success" style="color:red">
+<p>>N1|0</p>
+<p>CGCGTGGTCGGTGACGTGATCGGTAAGTACCACCCCCACGC</p>
+</div>
+
+<div class="alert alert-success" style="color:red">
+<p>>N2|0</p>
+<p>TTGCCGAACTTTTGACGGGACTCGCCGCCGCCCAGCCGGGT</p>
+</div>
+
+<div class="alert alert-success" style="color:red">
+<p>>N3|0</p>
+<p>CCCAAATAAAACATGTCCTGCATGGCATTAGTTTGTTGGGG</p>
+</div>
+</br>
+<button class="btn btn-primary" style="margin-bottom: 3%;" onclick="history.back()">Back</button>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<h1>Prediction Result</h1>
+	<font size="4" face="Courier, Pica, Monospace"></font>
+	{% if 'Inv' not in result[0] %}
+	<table style="border-radius: 5px; border-width: 1px;
+    border-spacing: 2px; border-color: gray; border-style: outset; border-collapse: separate;">
+	<thead>
+		<tr>
+			<th><div style="text-align: center; border: 1px solid black; background-color: #c9c9c9;"><h4><b>S#</b></h4></div></th>
+			<th><div style="text-align: center; border: 1px solid black; background-color: #c9c9c9;"><h4><b>Sequence</b></h4></div></th>
+			<th><div style="text-align: center; border: 1px solid black; background-color: #c9c9c9;"><h4><b>Position</b></h4></div></th>
+			<th><div style="text-align: center; border: 1px solid black; background-color: #c9c9c9;"><h4><b>Prediction</b></h4></div></th>
+			<th><div style="text-align: center; border: 1px solid black; background-color: #c9c9c9;"><h4><b>P-Score</b></h4></div></th>
+		</tr>
+	</thead>
+		<tbody>
+		    {%for r in result:%}
+		    {% if 'Non' in r[3]%}
+		    <tr class="alert alert-danger">
+		    	<td style="width: 2% !important;text-align: center;vertical-align: middle;font-weight: bolder;font-style: italic;font-size: initial;">{{r[0]}}</td>
+				<td style="letter-spacing: 2px;font-weight: bold;width: 5% !important;font-family: Courier, Pica, monospace;">{{r[1]}}</td>
+				<td style="width: 5% !important;text-align: center;vertical-align: middle;font-weight: bolder;font-style: italic;font-size: initial;">{{r[2]}}</td>
+				<td style="width: 10% !important;text-align: center;vertical-align: middle;font-weight: bolder;font-style: italic;font-size: initial;">{{r[3]}}</td>
+				<td style="width: 10% !important;text-align: center;vertical-align: middle;font-weight: bolder; font-size: initial;">{{r[4]}}</td>
+			</tr>
+			{% else %}
+			<tr class="alert alert-success">
+				<td style="width: 2% !important;text-align: center;vertical-align: middle;font-weight: bolder;font-style: italic;font-size: initial;">{{r[0]}}</td>
+				<td style="letter-spacing: 2px;font-weight: bold;width: 25% !important;font-family: Courier, Pica, monospace;">{{r[1]}}</td>
+				<td style="width: 3% !important;text-align: center;vertical-align: middle;font-weight: bolder;font-style: italic;font-size: initial;">{{r[2]}}</td>
+				<td style="width: 10% !important;text-align: center;vertical-align: middle;font-weight: bolder;font-style: italic;font-size: initial;">{{r[3]}}</td>
+				<td style="width: 10% !important;text-align: center;vertical-align: middle;font-weight: bolder; font-size: initial;">{{r[4]}}</td>
+			</tr>
+			{% endif %}
+			{%endfor%}
+		</tbody>
+</table>
+{% else %}
+	<h3 class="warning"> {{result[0]}} </h3>
+{% endif %}
+
+</br>
+<button class="btn btn-primary" style="margin-bottom: 3%;" onclick="history.back()">Back</button>
+
+{% endblock %}

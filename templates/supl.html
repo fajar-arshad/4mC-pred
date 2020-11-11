@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1 style="padding-bottom: 5%;">Benchmark Datasets</h1>
+  <a class="btn btn-primary" href="{{ url_for('static', filename='supl_data.zip') }}"> Online Supporting Information S1 </a>
+
+<hr>
+<h4>Note:</h4> 
+   <h5 class="alert alert-success"> >P28|<b>(1)</b> Indicate as Positive Sequence
+	TGTGTGTAGCGGGAATTTTGCCCGCACGCGCGCGCGCGAAT</h5> 
+   <h5 class="alert alert-danger"> >N1382|<b>(0)</b> Indicate as Negative Sequence
+	GAGTTTCCATGATTGCACAGCATCCAAAACGGGAAAGACAA</h5> 
+
+{% endblock %}

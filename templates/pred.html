@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Prediction Server</h1>
+  <a style="background-color: #ffffff; border: 1px solid; color: #337ab7; padding: 5px; font-weight: bold; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 5px;" onMouseOver="this.style.color='white', this.style.backgroundColor='#337ab7', this.style.border='1px solid black'" onMouseOut="this.style.color='#337ab7', this.style.backgroundColor='white', this.style.border='1px solid #337ab7'" class="btn btn-primary" href="{{ url_for('example') }}">Go To Examples</a>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    <div class="form-group">
+      {{render_field(form.sequence, class_="form-control", style="width: 60%;height: 170px;")}}
+    </div>
+    <p><input type="submit" class="btn btn-primary" value="Submit Sequence(s)"></p>
+  </form>
+{% endblock %}
