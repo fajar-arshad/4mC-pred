@@ -1,9 +1,10 @@
---------A brief Introduction to 4mC Server---------
+#--------A brief Introduction to 4mC Server---------#
+
 The epigenetic modification, DNA N4 methylcytosine(4mC) plays an important role in DNA expression, repair, and replication. It simply plays a crucial role in restriction-modification systems. The better and accurate prediction of 4mC sites in DNA is much-needed work to understand their functional behavior that leads to help in both drug discovery and biomedical research.
 
 For the convenience of users, particularly for the vast majority of experimental scientists, a publicly accessible web-server for 4mC-RF has been established. Moreover, to maximize users' convenience, given below a step-by-step guide on how to use it to get the desired results without the need to through the above mathematical details. The server can be accessed through http://www.biopred.org/4mC
 
---------A Quick Guide to use the 4mC-RF Server---------
+#--------A Quick Guide to use the 4mC-RF Server---------#
 
 Step 1.Click on the Server link from where you can either type or copy and paste the query sequences into the input box at the center of 4mC-RF Server Page. The input sequence should be in simple sequence format or in the FASTA format. A potential sequence in FASTA format consists of a single initial line beginning with the symbol ">" in the first column, followed by lines of sequence data in which nucleotides are represented using single-letter codes. Except for the mandatory symbol ">", all the other characters in the single initial line are optional and only used for the purpose of identification and description. The sequence ends if another line starting with the symbol ">" appears; this indicates the start of another sequence.
 
